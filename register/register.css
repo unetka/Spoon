@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+
+/* HEADER */
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img-reg/header.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register{
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 87%;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.reg-container{
+    width: 90%;
+    border: 5px dotted #000;
+    height: 100%;
+    border-top: none;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.head-text{
+    text-align: center;
+}
+
+.head-text p{
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.form{
+    display: flex;
+    gap: 25px;
+    height: 50%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form input{
+    height: 30px;
+    width: 250px;
+}
+
+.form button{
+    width: 160px;
+    height: 60px;
+    margin-top: 30px;
+    background-color: #5AB963;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    transition: .2s linear;
+}
+
+.form button:hover{
+    background-color: #fff;
+    border: 2px solid #5ab963;
+    color: #5ab963;
+    cursor: pointer;
+}
+
+
+.reg-img{
+    display: flex;
+    gap: 45px;
+}
+
+
+@media(max-width: 768px){
+    .register{
+        width: 90%;
+    }
+}
+
+@media(max-width: 460px){
+    .register{
+        width: 95%;
+    }
+}
+
+@media(max-width: 368px){
+    .register{
+        width: 100%;
+        height: 100%;
+    }
+    .reg-container{
+        border: none;
+    }
+    .head-text{
+        font-size: 80%;
+    }
+    .reg-img{
+        display: flex;
+        flex-direction: column;
+    }
+    .form{
+        height: 30%;
+    }
+}
+
+
+
+
+
+
+
