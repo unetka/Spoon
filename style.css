@@ -463,7 +463,6 @@ section[type="second"]{
     animation-fill-mode: both;
 }
 
-/*
 @keyframes img{
     0%{transform: translateX(0%)}
     100%{transform: translateX(110%)}
@@ -483,7 +482,6 @@ section[type="second"]{
     0%{transform: translateX(-135%)}
     100%{transform: translateX(0%)}
 }
-*/
 
 /*--------------------------------------------------------------------------------*/
 
