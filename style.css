@@ -5,6 +5,7 @@
 }
 
 .tochka{
+    overflow-y: hidden;
     margin-top: 40vh;
     display: flex;
     justify-content: center;
@@ -19,10 +20,11 @@
 }
 
 #preloader_malc{
+    position: fixed;
     overflow: hidden;
     background-color: #0000006e;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -189,7 +191,7 @@ img[type="two-image"]{
         margin: 40px 0px 40px 33px;
     }
     .fixed-page{
-    overflow: hidden;
+        overflow: hidden;
     }
     .menu.open-menu{
         overflow: auto;
@@ -371,6 +373,7 @@ section[type="second"]{
 }
 
 .second-card:hover .card img{
+    pointer-events: none;
     animation: img 2.3s;
     animation-fill-mode: both;
 }
@@ -483,14 +486,119 @@ section[type="second"]{
     100%{transform: translateX(0%)}
 }
 
+@media(max-width: 1200px){
+    .second-card{
+        display: none;
+    }
+}
+/*---CARD-COPY--------------------------------------------------------------------*/
+
+
+.second-card-copy{
+    width: 100%;
+    padding-top: 121px;
+    display: none;
+}
+
+.card-copy{
+    width: 81.25%;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    transition: 2s linear;
+}
+
+.one-copy h2{
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 36px;    
+    color: #999999;
+    margin-bottom: 28px;
+}
+
+.one-copy p{
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: #999999;
+}
+
+.one-copy span{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
+
+.card-text-copy h2{
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 36px;    
+    color: #999999;
+    margin-bottom: 28px;
+}
+
+.card-text-copy span{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
+
+.card-text-copy p{
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: #999999;
+}
+
+.card-two-copy{
+    margin-top: 90px;
+    width: 81.25%;
+    display: flex;
+    gap: 100px;
+    flex-direction: row-reverse;
+}
+
+@media(max-width: 1200px){
+    .second-card-copy{
+        display: block;
+    }
+    .card-copy{
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .card-img-copy img{
+        width: 90%;
+    }
+    .card-two-copy{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+
 /*--------------------------------------------------------------------------------*/
 
 .last-second-text{
-
+    padding-top: 108px;
 }
 
 section[type="trees"]{
-    padding-top: 270px;
+    padding-top: 170px;
+    padding-bottom: 50px;
     width: 100%;
     background-color: beige;
 }
@@ -550,6 +658,8 @@ section[type="trees"]{
 }
 
 .right-text button{
+    transition: .2s linear;
+    border-radius: 5px;
     width: 160px;
     height: 60px;
     background-color: #5ab963;
@@ -562,16 +672,55 @@ section[type="trees"]{
     border: none;
 }
 
+.right-text button:hover{
+    background-color: #fff;
+    border: 2px solid #5ab963;
+    color: #5ab963;
+    cursor: pointer;
+}
 
+/*-----FOOTER---------------------------------------------------------------------*/
 
+footer{
+    min-height: 399px;
+    width: 100%;
+    background-color: #0A0E1A;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
+.second-stolb{
+    flex-direction: column;
+    display: flex;
+    gap: 25px;
+}
 
+.second-stolb a{
+    text-decoration: none;
+    color: #fff;
+}
 
+.third-stolb{
+    display: flex;
+    gap: 18px;
+}
 
-
-
-
-
+@media(max-width: 768px){
+    footer{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        flex-direction: column;
+        gap:100px;
+    }
+    .trees-text{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 25px;
+        gap: 25px;
+    }
+}
 
 
 
