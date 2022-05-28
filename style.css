@@ -152,6 +152,10 @@ header{
     transition: .4s;
 }
 
+img[type="two-image"]{
+    opacity: 0;
+}
+
 @media(max-width: 767px){
     .menu-burger__header {
         position: relative; 
@@ -207,7 +211,17 @@ header{
     .menu-burger__header.open-menu:after, .menu-burger__header.open-menu:before{
         background-color: #000;
     }
-    
+    .open-menu img[type="one-image"]{
+        opacity: 0;
+    }
+    .open-menu img[type="two-image"]{
+        opacity: 1;
+        transition: .6s linear;
+        left: -10px;
+    }
+    .open-menu.logo{
+        z-index: 1000000900;
+    }
 }
 
 /* FIRST SECTION */
@@ -285,34 +299,270 @@ section[type="first"]{
     }
     section[type="first"]{
         padding-top: 125px;
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: 10%;
+        padding-right: 10%;
     }
-    
 }
 
+/* SECOND SECTION */
 
+section[type="second"]{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 115px;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.second-text{
+    text-align: center;
+}
 
+.second-text h2{
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #5AB963;
+    text-align: center;
+    text-transform: uppercase;
+}
 
+.second-text p{
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: #999999;
+}
 
+.second-text span{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000;
+}
 
+.second-card{
+    width: 100%;
+    padding-top: 121px;
+}
 
+.card{
+    width: 81.25%;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    transition: 2s linear;
+}
 
+.card-img{
+    z-index: 200000;
+}
 
+.card img{
+    z-index: 10000;
+    animation: img-back 2.3s;
+}
 
+.second-card:hover .card img{
+    animation: img 2.3s;
+    animation-fill-mode: both;
+}
 
+.second-card:hover .one{
+    animation: text 2.3s;
+    animation-fill-mode: both;
+}
+.one{
+    animation: text-back 2.3s;
+    animation-fill-mode: both;
+}
 
+.one h2{
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 36px;    
+    color: #999999;
+    margin-bottom: 28px;
+}
 
+.one p{
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: #999999;
+}
 
+.one span{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
 
+.card-text h2{
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 36px;    
+    color: #999999;
+    margin-bottom: 28px;
+}
 
+.card-text span{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
 
+.card-text p{
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: #999999;
+}
 
+.card-two{
+    margin-top: 90px;
+    width: 81.25%;
+    display: flex;
+    gap: 100px;
+    flex-direction: row-reverse;
+}
 
+.card-two:hover .card-text{
+    animation: img 2.3s;
+    animation-fill-mode: both;
+}
 
+.card-text{
+    animation: img-back 2.3s;
+    animation-fill-mode: both;
+}
 
+.card-two:hover .card-img{
+    animation: text 2.3s;
+    animation-fill-mode: both;
+}
+.card-img{
+    animation: text-back 2.3s;
+    animation-fill-mode: both;
+}
 
+/*
+@keyframes img{
+    0%{transform: translateX(0%)}
+    100%{transform: translateX(110%)}
+}
+
+@keyframes img-back{
+    0%{transform: translateX(110%)}
+    100%{transform: translateX(0%)}
+}
+
+@keyframes text{
+    0%{transform: translateX(0%)}
+    100%{transform: translateX(-135%)}
+}
+
+@keyframes text-back{
+    0%{transform: translateX(-135%)}
+    100%{transform: translateX(0%)}
+}
+*/
+
+/*--------------------------------------------------------------------------------*/
+
+.last-second-text{
+
+}
+
+section[type="trees"]{
+    padding-top: 270px;
+    width: 100%;
+    background-color: beige;
+}
+
+.trees-text{
+    width: 81%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.green-text span{
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background: #5AB963;
+}
+.green-text{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: green;
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5AB963;
+}
+
+.green-text p{
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5AB963;
+}
+
+.left-text p{
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 36px;
+    color: #999999;
+}
+
+.left-text span{
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
+
+.right-text button{
+    width: 160px;
+    height: 60px;
+    background-color: #5ab963;
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 700;    
+    font-size: 16px;
+    line-height: 30px;
+    color: #FFFDEB;
+    border: none;
+}
 
 
 
